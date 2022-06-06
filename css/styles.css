@@ -115,6 +115,7 @@ body {
 .header-link:focus {
   color: var(--accent-color);
 }
+
 .header-mail {
   font-weight: 500;
   font-size: 14px;
@@ -122,7 +123,19 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-color);
   margin-right: 50px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
 }
+
+.header-mail::before {
+  content: "";
+  background-image: url(../images/meil.svg);
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
 .header-mail:hover,
 .header-mail:focus {
   color: var(--accent-color);
@@ -134,7 +147,19 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-color);
   margin-right: 0;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
 }
+.header-tel::before {
+  content: "";
+  background-image: url(../images/tel.svg);
+  /* background-color: currentColor; */
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
 .header-tel:hover,
 .header-tel:focus {
   color: var(--accent-color);
@@ -217,8 +242,9 @@ body {
 }
 
 .specification-item-icon {
-  /* width: 70px; */
-  /* height: 70px; */
+  width: 100%;
+  /* height: ; */
+  margin-top: 10px;
   background-color: #f5f4fa;
   display: flex;
   align-items: center;
@@ -226,6 +252,7 @@ body {
 }
 
 .specification-title {
+  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -369,6 +396,36 @@ body {
   fill: #ffffff;
 }
 
+/* =============CLIENTS============= */
+.clients {
+}
+.clients-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+.clients-list {
+  display: flex;
+  background-repeat: no-repeat;
+}
+.clients-item {
+  box-sizing: border-box;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clients-link {
+  width: 170px;
+  height: 92px;
+  background-position: 50% 50%;
+}
+
 /* =============FILTERS================*/
 
 .filters {
@@ -469,6 +526,7 @@ body {
   /* padding-bottom: 60px; */
   /* padding-top: 20px; */
 }
+
 .footer-logo {
   font-family: "Raleway";
   font-weight: 700;
@@ -508,4 +566,18 @@ body {
 .footer-tel:hover,
 .footer-tel:focus {
   color: var(--accent-color);
+}
+
+/* .footer-soc {
+  display: flex;
+} */
+
+.footer-soc-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
 }
