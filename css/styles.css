@@ -133,19 +133,6 @@ body {
   color: var(--accent-color);
 }
 
-.header-contact-mail {
-  margin-right: 5px;
-  fill: currentColor;
-}
-/* .header-mail::before {
-  content: "";
-  background-image: url(../images/meil.svg);
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  color: currentColor;
-} */
-
 .header-tel {
   font-weight: 500;
   font-size: 14px;
@@ -158,13 +145,10 @@ body {
   background-repeat: no-repeat;
 }
 
-.header-tel::before {
-  content: "";
-  background-image: url(../images/tel.svg);
+.header-contact-mail,
+.header-contact-tel {
+  margin-right: 5px;
   fill: currentColor;
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
 }
 
 .header-tel:hover,
@@ -440,7 +424,9 @@ body {
   margin-right: 30px;
 }
 
-.clients-link {
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
 }
 
 /* =============FILTERS================*/
@@ -532,8 +518,12 @@ body {
   display: block;
   background-color: #212121;
 }
-/* .footer-contacts-logo {
-} */
+.footer-cont {
+  display: flex;
+  /* width: 30%; */
+  align-items: flex-start;
+  outline: 2px solid red;
+}
 .footer-contacts {
   display: flex;
   flex-direction: column;
@@ -552,6 +542,7 @@ body {
 .logo-footer {
   color: #ffffff;
 }
+
 .footer-address {
   font-weight: 400;
   font-size: 14px;
@@ -583,8 +574,10 @@ body {
 }
 
 .footer-soc {
-  position: absolute;
+  /* position: absolute; */
   padding-left: 70px;
+  width: 206px;
+  height: 80px;
 }
 .footer-soc-text {
   font-weight: 700;
